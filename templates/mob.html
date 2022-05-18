@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% static 'images' as baseurl %}
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static './assets/apple-icon-180x180.png' %}">
+  <link href="./assets/favicon.ico" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>new mobiles</title>
+
+<link href="{% static './main.d8e0d294.css' %}" rel="stylesheet"></head>
+
+<body class="">
+
+<!-- Add your content of header -->
+
+
+
+
+<div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link"  href="/com\home"><b> Home </b> </a>
+        <a class="nav-link" href="/com\com"><b> Complaint </b> </a>
+        <a class="navbar-brand" href="/com\mob"><b> NEW MOBILE INFO </b> </a>
+        <a class="nav-link" href="#"><b> ABOUT US </b></a>
+
+      </div>
+    </div>
+  </div>
+
+</nav>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="content-wrapper">
+
+
+<!-- Add your site or app content here -->
+
+ <div class="container">
+   <div class="row">
+     <div class="col-xs-12">
+
+ <div class="card">
+          <div class="card-block">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="{% static './assets/images/img-05.jpeg'%}" class="img-responsive" alt="...">
+                <div class="carousel-caption">
+                  <h3 class="h5">Jules for Bast5ion</h3>
+                  <p>2017</p>
+                </div>
+              </div>
+
+
+
+            {% for si in side %}
+              <div class="item">
+                <img src="{{ si.pic.url }}" class="img-responsive" alt="...">
+                <div class="carousel-caption">
+                  <h3 class="h5">{{ si.name }}</h3>
+                    <h4><a href="{{ si.link }}">click here to open </a></h4>
+                  <p>{{ si.dec }}</p>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+          </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="card">
+          <div class="card-block">
+            <h2>OFFERS</h2>
+            <div class="row">
+
+
+
+
+                {% for mo in mob %}
+              <div class="col-md-4">
+                <img src="{{ mo.pic.url }}" class="img-responsive" alt="">
+                <h3 class="h5">{{ mo.Name }} {{ mo.price }}</h3>
+                <p>{{ mo.dec }}</p>
+                  <a href="{{ mo.li }}"><h4>BUY</h4></a>
+              </div>
+                {% endfor %}
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+     </div>
+   </div>
+ </div>
+
+</main>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     scrollRevelation('.card');
+  });
+</script>
+<script type="text/javascript" src="{% static './main.bc58148c.js' %}"></script></body>
+
+</html>
